@@ -1,0 +1,263 @@
+{% extends "base.html" %} {% block page_title %} HOME {% endblock page_title %}
+{% block javascript %}
+<style>
+  .step1 {
+    opacity: 0;
+    z-index: -1;
+  }
+  .step2 {
+    opacity: 0;
+    z-index: -1;
+  }
+  .step3 {
+    opacity: 0;
+    z-index: -1;
+  }
+  .wrap > .ani > ul {
+    margin-top: 300px;
+  }
+  .wrap > .ani > ul > li {
+    height: 100%;
+  }
+  .wrap > .ani > ul > li > p {
+    height: 30px;
+    margin-bottom: 35px;
+    font-size: larger;
+  }
+
+  .img_box > div {
+    z-index: -99;
+  }
+  .wrap > .ani {
+    position: absolute;
+  }
+  .backgroundlogo {
+    opacity: 0.2;
+    float: unset;
+    position: relative;
+    top: -300px;
+    top: -430px;
+  }
+  .inner > .about {
+    animation: showingupbtn 2s ease-in-out;
+  }
+  .company-history {
+    height: 120px;
+    position: relative;
+    animation: showingupbtn 5s ease-in-out;
+  }
+  .company-history > h2 {
+    position: absolute;
+    top: -50px;
+    text-align: center;
+    width: 100%;
+  }
+  .odn-history {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .odn-history > .odn-history-div {
+    width: auto;
+    border-left:3px solid #203864;
+    padding-left: 15px;
+  }
+  .odn-history > .odn-history-div > h3 {
+    margin-top: 50px;
+    position: relative
+  }
+  .odn-history > .odn-history-div > h3 > .dot {
+    width: 15px;
+    height: 15px;
+    background-color: #203864;
+    border-radius: 100%;
+    position: absolute;
+    left: -24px;
+    top:11px;
+  }
+  .section2 {
+    height: 100%;
+    padding-bottom: 200px;
+  }
+  .about {
+    <!-- text-align: left; -->
+  }
+  .section2 > .odn-history {
+    padding: 0px 30px;
+    text-align: left;
+    font-family: "Jua", sans-serif;
+  }
+  .section2 > .odn-history > h2 {
+    text-align: center;
+  }
+
+    @media screen and (min-width: 1023px) {
+    .section2 > .odn-history {
+      font-size: larger;
+      font-size: x-large;
+    }
+    .company_introduction-sectence {
+      font-size:x-large;
+    }
+  }
+  @media screen and (max-width: 639px) {
+    .backgroundlogo {
+      top: -490px;
+    }
+    .company-introduction-sentence {
+      margin-top: -50px;
+    }
+    .section1 > .inner {
+    }
+    .section2 {
+      height: 550px;
+      height: 100%;
+      padding-bottom: 200px;
+      text-align: center;
+    }
+    .section2 > .info > .inner > .txt_box {
+      padding-top: 150px;
+    }
+    .company-history {
+      height: 60px;
+      top: -100px;
+    }
+    .company_introduction-sectence {
+      padding-left: 0px;
+    }
+    .odn-history > .odn-history-div > h3 > .dot {
+      top:5px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .company_introduction-sectence {
+      font-size:medium;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .company_introduction-sectence {
+      font-size:small;
+        }
+  }
+  @media screen and (max-width: 320px) {
+    .company_introduction-sectence {
+      font-size:small;
+        }
+    .wrap > .ani > ul {
+          margin-top: 100px;
+      }
+    .wrap > .ani > ul > li > p {
+        margin-bottom: 15px;
+    }
+      }
+    @media screen and (max-width: 280px) {
+      .company_introduction-sectence {
+        font-size:x-small;
+          }
+        }
+</style>
+
+<script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/static/js/slick.min.js"></script>
+<script type="text/javascript" src="/static/js/typed.min.js"></script>
+<script src="/static/js/common.js"></script>
+{% endblock javascript %} {% block content %}
+<div class="main">
+  <section class="section1">
+    {% include 'partials/nav.html' %}
+    <!-- 이 부분 지우면, jquery 적용이 깨짐 -->
+    <!-- 이 부분 지우면, jquery 적용이 깨짐 -->
+    <!-- 이 부분 지우면, jquery 적용이 깨짐 -->
+    <span class="en step1">About US</span>
+    <span class="ko step1"></span>
+    <span class="ko step2">Data<br />Service</span>
+    <span class="en step2"></span>
+    <span class="en step3">IOT<br />Product</span>
+    <span class="ko step3">제품소개</span>
+    <!-- 이 부분 지우면, jquery 적용이 깨짐 -->
+    <!-- 이 부분 지우면, jquery 적용이 깨짐 -->
+    <!-- 이 부분 지우면, jquery 적용이 깨짐 -->
+    <div class="inner">
+      <h2 class="about" style="line-height: 2">About US</h2>
+      <div class="company-intro">
+        <div class="company-introduction-sentence">
+          <div class="img_box">
+            <div class="wrap">
+              <div class="ani">
+                <ul class="company_introduction-sectence">
+                  <li>
+                    <p>오든은 데이터의 미래를 만들어 가고 있습니다.</p>
+                  </li>
+                  <li>
+                    <p>어디서든 우리 환경을 모니터링 할 수 있는</p>
+                    <p>시스템은 먼 미래의 일이 아닙니다.</p>
+                  </li>
+                  <li>
+                    <p>데이터를 안전하게 보관하고</p>
+                    <p>지속 가능한 미래를 준비하겠습니다.</p>
+                  </li>
+                  <li>
+                    <p>오든에서 데이터, 그 이상의 역사를</p>
+                    <p>만들기 위해 달려가겠습니다.</p>
+                  </li>
+                </ul>
+                <div class="img_wrap backgroundlogo">
+                  <img src="/static/img/sec1_01.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="company-history">
+        <h2 style="line-height: 2">회사 연혁</h2>
+        <span id="botton_arrow">next page</span>
+      </div>
+    </div>
+  </section>
+  <section class="section2">
+    <div class="odn-history">
+      <!-- <img src="/static/img/odn_history.png" alt="" /> -->
+      <div class="odn-history-div">
+        <h2>연혁</h2>
+        <h3>
+          <span class="dot"></span>
+          2021
+        </h3>
+        <ul>
+          <li>기업부설연구소 설립 (기 연구개발전담부서 확충)</li>
+          <li>법인 상호 변경 - (주)오든</li>
+          <li>농업기술실용화재단 육성기업 선정</li>
+          <li>
+            전남창조경제혁신센터 엑셀러레이터 투자 유치(신주발생, 자본증자)
+          </li>
+          <li>특허청 직무발명보상제도 우수기업 인증</li>
+        </ul>
+        <h3><span class="dot"></span>2020</h3>
+        <ul>
+          <li>디자인 특허 등록(스마트부표)</li>
+          <li>창업성장기술개발 R&D과제 선정</li>
+          <li>전남 엔젤투자 매칭펀드 투자 유치</li>
+          <li>기술신용평가 우수등급(T4) 인증</li>
+          <li>KT공식파트너사(오투정보통신) 해황자료 수집장비 사업 협약</li>
+        </ul>
+        <h3><span class="dot"></span>2019</h3>
+        <ul>
+          <li>국립수산과학원 국유특허권 통상실시 계약</li>
+          <li>연구개발전담부서 설립(해양 IOT 기술연구부)</li>
+          <li>창업진흥원 초기창업패키지 선정</li>
+          <li>밴처기업 인증</li>
+          <li>해양 환경 모니터링 모듈 개발 착수</li>
+        </ul>
+        <h3><span class="dot"></span>2018</h3>
+        <ul>
+          <li>양식용 해양 부표, 기자재 수주(OEM)</li>
+          <li>(주)코바코 법인 설립</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+{% include 'partials/footer.html' %}
+{% endblock content %}

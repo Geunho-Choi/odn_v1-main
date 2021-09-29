@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Environment
+{% endblock page_title %}
+
+{% block javascript %}
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=77cm9f6ne5"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+{% endblock javascript %}
+
+{% block content %}
+{% include 'partials/nav.html' %}
+<section class="env_info" >
+    
+    <div class="map" id="map" style="width:100%;height:900px;"></div>
+
+    <script type="text/javascript">
+
+        $(function() {
+            
+            initMap();
+            
+        });
+        
+        function initMap(){
+            // Db에서 views를 통해 데이터를 가져와서 시각화하기위해 json으로 만들어줌
+            let coord = "{{coordinate}}"
+            let coordinate = coord.replace(/&#x27;/g,"\"");
+            let latlngArea=JSON.parse(coordinate)
+            let markers = new Array();
+            let infoWindows = new Array();
+            // 지도의 센터와 초기 확대 값 정의
+            let map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.3595704, 127.105399),
+                zoom: 7
+        });
+        // 정제된 json데이터의 좌표값으로 마커와 그 위치의 정보값을 나타내기
+            for(let i of latlngArea){
+                //마커 찍기
+                let marker = new naver.maps.Marker({
+                    title: i["area1"] + i["area2"] + i["area3"] + i["area4"],
+                    position: new naver.maps.LatLng(i["lat"],i["lng"]),
+                    map: map
+                });
+        
+            //마커의 위치에 행정구역 정보 나타내기
+ 
+                let infoWindow = new naver.maps.InfoWindow({
+                    content: "<div 'style=width:200px; text-align:center; padding:10px;'></b>" + i['area1']+ " " + i['area2'] + "<br>" + i['area3'] + " " + i['area4'] + "<br>" + "현재 수온 : " + i['temperature'] + "</b></div>"});
+                markers.push(marker);
+                infoWindows.push(infoWindow);
+            }
+                    
+            function getClickHandler(seq) {
+                return function(e) {
+                    var marker = markers[seq],
+                        infoWindow = infoWindows[seq];
+            
+                    if (infoWindow.getMap()) {
+                        infoWindow.close();
+                    } else {
+                        infoWindow.open(map, marker);
+                    }
+                }
+            }
+            
+            for (var i=0, ii=markers.length; i<ii; i++) {
+                naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+            }
+        }
+
+ 
+      </script>
+<!--
+    <div class="datum" style="width:50%;" >
+        <ul>
+            {% for environ in environs %}
+                <li class="data">
+                    ocean : {{environ.ocean}} {{environ.area1}} {{environ.area2}} {{environ.area3}} {{environ.area4}}
+                    temperature : {{environ.temperature}}
+                    oxygen : {{environ.oxygen}}
+                    hydrogen : {{environ.hydrogen}}
+                    salt : {{environ.salt}}
+                    turbidity : {{environ.turbidity}}
+                    measurement_time : {{environ.measurement_time}}
+                </li>
+            {% endfor %} 
+        </ul>
+        {% if page_obj.has_previous%}
+            <a href="?page={{page_obj.number|add:-1}}" class="text-indigo-500">
+            <i class="fas fa-arrow-left fa-lg"></i>
+            </a>
+        {% endif %}
+
+        <span class="mx-3 font-medium text-lg">
+        {% with current_page=page_obj.number total_pages=page_obj.paginator.num_pages %}
+            Page {{current_page}} of {{total_pages}}
+        {% endwith %}</span>
+        {% if page_obj.has_next %}
+            <a href="?page={{page_obj.number|add:1}}" class="text-indigo-500">
+                <i class="fas fa-arrow-right fa-lg"></i>
+            </a>
+        {% endif %}
+    </div>
+-->
+</section>
+
+{% include 'partials/footer.html' %}
+{% endblock content %}

@@ -1,0 +1,490 @@
+{% extends "base.html" %} {% block page_title %} HOME {% endblock page_title %}
+{% block javascript %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>About US</title>
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/static/img/favicon.ico"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" type="text/css" href="/static/css/reset.css" />
+  <link rel="stylesheet" href="/static/css/slick.min.css" />
+  <link rel="stylesheet" href="/static/css/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/product.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+
+  <script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/static/js/slick.min.js"></script>
+  <script type="text/javascript" src="/static/js/typed.min.js"></script>
+  <script src="/static/js/common.js"></script>
+</head>
+
+{% endblock javascript %} {% block content %}
+<body>
+  {% include 'partials/nav.html' %}
+  <div class="main">
+    <!-- <section class="section1">
+      <div class="inner">
+        <h2 class="about" style="line-height: 2">About Product</h2>
+      </div>
+    </section> -->
+    <section class="section2">
+      <div class="inner">
+        <div class="container about">
+          <div class="row">
+            <div class="col-md-12 sub_title">스마트부표 (KBC-SB-01)</div>
+            <!--col-md-12 sub_title end-->
+            <div class="product_wrap">
+              <div class="col-md-4 col-sm-4 col-xs-12 product">
+                <img src="/static/img/product_1.png" alt="no" />
+              </div>
+              <!--col-md-4 product end-->
+              <div class="col-md-8 col-sm-8 col-xs-12 product_txt">
+                <p>
+                  양식부표에 IOT기술로 데이터를 수집해 활용하는 제품으로서 IOT
+                  센서 및 저전력 장거리 통신망을 이용하여 해상 환경을
+                  모니터링하여 실시간 측정 데이터(수온, 염도, 용존산소 등)를
+                  WEB과 APP을 통해 육상의 사용자에게 제공하는 IOT 스마트부표
+                  입니다.
+                </p>
+                <ul>
+                  <li>
+                    <img src="/static/img/check.png" alt="no" />빅데이터 구축이
+                    가능
+                  </li>
+                  <li>
+                    <img src="/static/img/check.png" alt="no" />기존 시스템 대비
+                    유지 비용 절감으로 스마트양식 기자재의 보급화 가능
+                  </li>
+                  <li>
+                    <img src="/static/img/check.png" alt="no" />독립형 구동이
+                    가능한 저전력 제품
+                  </li>
+                  <li>
+                    <img src="/static/img/check.png" alt="no" />이상수온, 적조
+                    등으로 인한 피해보상 지원예산 절감의 효과
+                  </li>
+                </ul>
+              </div>
+              <!--col-md-8 product_txt end-->
+            </div>
+            <!--product_wrap end-->
+
+            <div class="col-md-12 col-sm-12 col-xs-12 frame">
+              <div class="col-md-6 col-sm-6 col-xs-12 certificate">
+                <img
+                  onclick="window.open(this.src)"
+                  hspace="0"
+                  src="/static/img/특허증.jpg"
+                  alt="특허"
+                />
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 certificate">
+                <img
+                  onclick="window.open(this.src)"
+                  hspace="0"
+                  src="/static/img/디자인등록증.jpg"
+                  alt="디자인등록"
+                />
+              </div>
+            </div>
+            <!--frame end-->
+            <div class="col-md-12 col-sm-12 col-xs-12 system">
+              <img
+                src="/static/img/system_PC.jpg"
+                alt="스마트부표 시스템 개묘도"
+                class="pc"
+              />
+              <img
+                src="/static/img/system_mobile.jpg"
+                alt="스마트부표 시스템 개묘도"
+                class="mo"
+              />
+            </div>
+            <!--system end-->
+          </div>
+          <!--row end-->
+          <div class="row">
+            <div class="col-md-12 sub_title">
+              태양광 경계표시 부표 (KBC-BB-01)
+            </div>
+            <!--sub_title end-->
+            <div class="col-md-4 col-sm-5 product">
+              <img src="/static/img/product_2.png" alt="no" />
+            </div>
+            <!--product end-->
+            <div class="col-md-8 col-sm-7 product_txt">
+              <ul>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first">제품명:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >태양광 경계표시 부표 (KBC-BB-01)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first">규격:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Solar-1, 380Φ</span
+                  >
+                </li>
+                <li><hr /></li>
+                <!----------------------------------line------------------------------------------->
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first">용도:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >항로표시</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >경계표시</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >안전표시</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >경관조명</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >기타 조명이 필요한 곳 등</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--product_txt end-->
+          </div>
+          <!--row end-->
+          <div class="row">
+            <div class="col-md-12 sub_title">
+              어장항로 점등 부표 (KBC-LB-01)
+            </div>
+            <div class="col-md-4 col-sm-5 product">
+              <img src="/static/img/product_3.png" alt="no" />
+            </div>
+            <div class="col-md-8 col-sm-7 product_txt">
+              <ul>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first">제품명:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >어장항로 점등 부표 (KBC-LB-01)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first">중량:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second">24kg</span>
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first">수압부:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >ABS수지 675Φ</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"
+                    >고휘도LED:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >26개(전구)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first">렌즈:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >고강도 PC수지(투명)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"
+                    >태양전극판:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >100㎜ × 100㎜</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first">전원:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >2V / 5Ah 충전 전</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"
+                    >전자수명:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second">3년</span>
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"
+                    >발광색상:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >적색, 황색</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"
+                    >발광간격:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >0.4초(30회/)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-3 col-xs-4 first"
+                    >발광거리:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second">2 ~ 3㎞</span>
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >수압부자부력:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second">200㎏</span>
+                </li>
+
+                <li><hr /></li>
+                <!----------------------------------------------------2019---------------------------------------------------->
+                <li class="row">
+                  <span class="col-lg-4 col-sm-2 col-xs-4 first">용도:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >양식장 표시(가투리, 미역, 김, 가리)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-2 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >어장표시(정치망, 안강망)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-2 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >어장 및 항로표시(어장구획, 위험수역, 항로)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-2 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >기타표시(항만공사, 토목공사)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--row end-->
+          <div class="row">
+            <div class="col-md-12 sub_title">
+              Border indicator buoy (KBC-BB-01)
+            </div>
+            <div class="col-md-4 col-sm-5 product">
+              <img src="/static/img/product_2.png" alt="no" />
+            </div>
+            <div class="col-md-8 col-sm-7 product_txt">
+              <ul>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Product name:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Border indicator buoy (KBC-BB-01)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first">Size:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 econd"
+                    >380Φ×500㎜</span
+                  >
+                </li>
+                <li><hr /></li>
+                <!----------------------------------------------------2019---------------------------------------------------->
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first">Use:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Course indicaotor</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Border indicaotor</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Safety indicaotor</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Landscape lighting indicator</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 irst"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Where lighting is needed</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--영어버전-->
+          </div>
+          <!--row end-->
+          <div class="row">
+            <div class="col-md-12 sub_title">
+              Lighting buoy for fishing ground course (KBC-LB-01)
+            </div>
+
+            <div class="col-md-4 col-sm-5 product">
+              <img src="/static/img/product_3.png" alt="no" />
+            </div>
+            <div class="col-md-8 col-sm-7 product_txt">
+              <ul>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Product name:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Lighting buoy for fishing ground course (KBC-LB-01)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first">Weight:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 econd">24kg</span>
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Water pressure buoy:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >ABS resin 675Φ</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >High-intensity LED:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >26 bulbs</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first">Lens:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >High-strength PC resin(Transparent)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Solar baltery electrode:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >100㎜ × 100㎜</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Power source:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >2V / 5Ah Charging battery</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Service life:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second">3year</span>
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Luminous color:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Red, Yellow</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Luminous interval:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >0.4sec.(30times/min)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"
+                    >Luminous distance:</span
+                  >
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second">2 ~ 3㎞</span>
+                </li>
+                <li class="row">
+                  <span class="col-lg-5 col-sm-4 col-xs-4 first"
+                    >Buoyancy of water pressure buoy:</span
+                  >
+                  <span class="col-lg-7 col-sm-7 col-xs-8 second">200㎏</span>
+                </li>
+                <li><hr /></li>
+                <!----------------------------------------------------2019---------------------------------------------------->
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first">Use:</span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Aquafarm in dication(Sea cage, sea tangle, laver,
+                    scallop)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Fishing ground indication(Set net, stow net)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Fishing &amp; Course Indication(Fishery compartment, Danger
+                    zone, Navigation course)</span
+                  >
+                </li>
+                <li class="row">
+                  <span class="col-lg-4 col-sm-4 col-xs-4 first"></span>
+                  <span class="col-lg-8 col-sm-7 col-xs-8 second"
+                    >Other indications(Port/harbor construction, Civil
+                    engineering work)</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <!--product_txt end-->
+          </div>
+          <!--row end-->
+        </div>
+      </div>
+    </section>
+  </div>
+  {% include 'partials/footer.html' %} {% endblock content %}
+</body>

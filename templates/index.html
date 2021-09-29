@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block page_title %}
+  Home
+{% endblock page_title %}
+
+{% block javascript %}
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/js/slick.min.js"></script>
+    <script type="text/javascript" src="/static/js/typed.min.js"></script>
+    <script src="/static/js/common.js"></script>
+{% endblock javascript %}
+
+{% block content %}
+<main>
+  {% include 'partials/nav.html' %}
+  <section class="section1">
+        <div class="inner">
+          <div class="img_box">
+            <div class="wrap">
+              <div class="ani">
+                <div class="img_wrap">
+                  <img src="/static/img/sec1_01.png" alt="" />
+                  <map name="img1">
+                    <area
+                      href="{% url 'core:about' %}"
+                      shape="poly"
+                      coords="168,0,335,98,168,201,0,98"
+                    />
+                  </map>
+                  <div class="box step1">
+                    <img
+                      class="back"
+                      src="/static/img/sec1_img1_1.png"
+                      alt=""
+                    />
+                    <img
+                      class="front"
+                      src="/static/img/sec1_img1.png"
+                      alt=""
+                      usemap="#img1"
+                    />
+                  </div>
+                  <map name="img2">
+                    <area
+                      href="{% url 'environ:env' %}"
+                      shape="poly"
+                      coords="0,0,75,45,34,71,34,149,141,85,164,99,164,249,0,153"
+                    />
+                  </map>
+                  <div class="box step2">
+                    <img
+                      class="back"
+                      src="/static/img/sec1_img2_1.png"
+                      alt=""
+                    />
+                    <img
+                      class="front"
+                      src="/static/img/sec1_img2.png"
+                      alt=""
+                      usemap="#img2"
+                    />
+                  </div>
+                  <map name="img3">
+                    <area
+                      href="{% url 'core:product' %}"
+                      shape="poly"
+                      coords="0,99,22,85,129,149,129,71,89,45,164,0,164,155,0,249"
+                    />
+                  </map>
+                  <div class="box step3">
+                    <img
+                      class="back"
+                      src="/static/img/sec1_img3_1.png"
+                      alt=""
+                    />
+                    <img
+                      class="front"
+                      src="/static/img/sec1_img3.png"
+                      alt=""
+                      usemap="#img3"
+                    />
+                  </div>
+                </div>
+
+                <div class="txt about">
+                  <i></i>
+                  <div class="txt_wrap">
+                    <span class="en step1">About US</span>
+                    <div class="line_box">
+                      <span class="ko step1">회사소개<br />포트폴리오</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt service">
+                  <i></i>
+                  <div class="txt_wrap">
+                    <div class="line_box">
+                      <span class="ko step2">Data<br />Service</span>
+                    </div>
+                    <span class="en step2">서비스 소개</span>
+                  </div>
+                </div>
+                <div class="txt product">
+                  <i></i>
+                  <div class="txt_wrap">
+                    <span class="en step3">IOT<br />Product</span>
+                    <div class="line_box">
+                      <span class="ko step3">제품소개</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span id="botton_arrow">next page</span>
+        </div>
+      </section>
+      <section class="section2">
+        <div class="inner">
+          <div class="slide_box">
+            <div class="slide_lists">
+              <div>
+                <img src="/static/img/sec2_01.jpg" alt="" />
+              </div>
+              <div>
+                <img src="/static/img/sec2_01.jpg" alt="" />
+              </div>
+              <div>
+                <img src="/static/img/sec2_01.jpg" alt="" />
+              </div>
+              <div>
+                <img src="/static/img/sec2_01.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {% include 'partials/footer.html' %}
+  {% endblock content %}    
+       
+       

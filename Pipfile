@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+flake8 = "*"
+django-phonenumber-field = "*"
+phonenumbers = "*"
+requests = "*"
+django-dotenv = "*"
+bs4 = "*"
+xmltodict = "*"
+numpy = "*"
+
+[dev-packages]
+flake8 = "*"
+black = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
